@@ -1,0 +1,55 @@
+
+<div class="container" style="text-align: center;">
+<h1>CRUD ANGULAR REST API</h1>
+
+<h3>listar</h3>
+
+<button class="btn btn-primary" (click)="getAllUsuarios()">LISTAR USUARIOS</button> <br>
+
+<table class="table table-striped table-bordered">
+  <thead>
+      <tr>
+          <th>identificacion</th>
+          <th>nombre</th>
+          <th>grupo</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let list of listUsuarios">
+          <td>{{list.identificacion}}</td>
+          <td>{{list.nombre}}</td>
+          <td>{{list.grupo}}</td>
+      </tr>
+  </tbody>
+</table>
+
+<h3>buscar</h3>
+
+<div class="container">
+
+  <div class="row">
+
+    <div class="col">
+
+      <label> identificacion></label>
+
+    </div>
+
+    <div class="col">
+
+      <input type="text" [(ngModel)]="identificacion" >
+
+    </div>
+
+  </div>
+
+  <button style="margin-right: 2%;" class="btn btn-primary" (click)="getUsuarios()">BUSCAR</button>
+
+  <p>El usuario encontrado es: {{usuario.nombre}}</p>
+
+
+</div>
+
+</div>
+
+

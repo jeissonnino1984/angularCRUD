@@ -1,0 +1,56 @@
+<div class="container">
+
+  <div class="fondo">
+    <h3>interpolacion, enlazar objetos del front con el typescript</h3>
+  <div style="text-align: center;" >
+    <label>numero 1;</label>
+    <input type="number" [(ngModel)]="numero1"> <br>
+    <label>numero 2;</label>
+    <input type="number" [(ngModel)]="numero2">
+     <h3 *ngIf="rendered" >resultado {{result}}</h3>
+
+    <br>
+    <button style="margin-right: 2%;" class="btn btn-primary" (click)="sum()">SUMA</button>
+
+    <button style="margin-right: 2%;" class="btn btn-primary" (click)="res()">RESTA</button>
+
+    <button class="btn btn-primary" (click)="reset()">REINICIAR</button>
+  </div>
+
+  </div>
+
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <div>
+  <h3>ngFor</h3>
+  <ul >
+    <li  *ngFor="let misanimales of animales" >{{animales}}</li>
+  </ul>
+  </div>
+
+
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <div>
+    <h3>valores entre objetos del front TEXTO DINAMICO</h3>
+    <input type="text" #valor>
+    <h2> el valor es; {{valor.value}}</h2>
+    <button (click)="mostrarValor(valor.value)">MOSTRAR</button>
+  </div>
+
+  <br>
+  <br>
+  <br>
+  <br>
+
+
+
+
+
+</div>
